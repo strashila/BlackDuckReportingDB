@@ -1,4 +1,4 @@
-/* Get all projects per component name */   
+/* Get all projects per component name, for example Log4j */   
 
 
 set search_path=reporting;  
