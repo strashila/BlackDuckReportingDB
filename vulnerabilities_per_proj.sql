@@ -1,3 +1,5 @@
+/* Get all vulnerabilities in all the project version BOMs with component names */
+
 set search_path=reporting;  
 
 select distinct  
