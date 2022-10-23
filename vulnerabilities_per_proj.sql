@@ -1,4 +1,6 @@
-/* Get all vulnerabilities in all the project version BOMs with component names */
+/* Get all vulnerabilities in all the project version BOMs with component names
+For BDSA "Overall" score is Temporal, for CVE (NVD) it's Base 
+*/
 
 SET search_path=reporting;  
 
