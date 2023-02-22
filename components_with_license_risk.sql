@@ -1,3 +1,6 @@
+/* Get all components that have any license risk and were discovered in a specified timeframe */   
+
+
 set search_path=reporting;
 
 select 
