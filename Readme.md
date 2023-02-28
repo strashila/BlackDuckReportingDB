@@ -2,7 +2,7 @@ A few helpful queries for BlackDuck reporting DB
 
 Ways to connect to reporting DB:  
 
-1. **Docker exec**   
+1. **Docker exec from the deployment host (for internal DB)**   
 $ docker exec -it $(docker ps -qf name=postgres) psql -U blackduck -d bds_hub  
 bds_hub=# set search_path=reporting;  
   
