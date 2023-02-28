@@ -1,4 +1,4 @@
-/* Get all projects per component name "python" where license risk is medium or high */  
+/* Get all projects with name "python" where license risk is medium or high */  
 
 SET search_path=reporting;  
 
