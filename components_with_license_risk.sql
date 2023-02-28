@@ -1,9 +1,9 @@
 /* Get all components that have any license risk and were discovered in a specified timeframe */   
 
 
-set search_path=reporting;
+SET search_path=reporting;
 
-select 
+SELECT 
 proj.project_name,
 pv.version_name,
 comp.component_name, 
@@ -16,12 +16,12 @@ comp.license_high_count,
 comp.license_medium_count,
 comp.license_low_count
 
-from component comp
-inner join project_version pv
-on comp.project_version_id = pv.version_id
-inner join project proj on proj.project_id = pv.project_id
+FROM component comp
+INNER JOIN project_version pv
+ON comp.project_version_id = pv.version_id
+INNER JOIN project proj ON proj.project_id = pv.project_id
 
-where comp.created_at >= '2023-01-01' and comp.created_at <= '2023-01-31'
-and (license_high_count + license_medium_count + license_low_count) > 0
+WHERE comp.created_at >= '2023-01-01' AND comp.created_at <= '2023-01-31'
+AND (license_high_count + license_medium_count + license_low_count) > 0
 
-order by proj.project_name, pv.version_name, comp.component_name;
+ORDER BY proj.project_name, pv.version_name, comp.component_name;
